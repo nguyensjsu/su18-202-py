@@ -9,7 +9,7 @@ What are the current blockers/challenges the team is facing?
 Gyanesh Pandey
 
 Past Week
-We focussed on defining the problem. We also had a brainstorm session to figure what might be interesting features we might want to build on top of the basic ones.
+- We focussed on defining the problem. We also had a brainstorm session to figure what might be interesting features we might want to build on top of the basic ones.
 
 I created wireframes for the app, which help see the different user journeys.
 
