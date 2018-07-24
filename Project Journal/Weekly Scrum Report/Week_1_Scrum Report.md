@@ -23,8 +23,34 @@ Blockers/Challenges
 
 
 
+-----------------------------------------------------------------------------------------------------------------------------
+
 
 Yamini Muralidharen
+
+
+Past week
+- We discussed the order of flows and finalized the apis which we are going to implement
+
+-  Brainstormed with the team and proposed to use local dynamo db with spring boot 
+
+- Refined the table models after discussing with the team
+
+- Worked on payments api to get the value of the card table from local dynamodb and tested the api through Postman
+
+- We focussed on the XP core value Communication and this helped us to understand the problem statement and come up with a better approach in the implementation of the project
+
+Next Week
+
+- I will be working on the payments api to query the cost from menu table 
+- Check for balance from the card and process the order based on the card balance
+- On successful payment , will send update to add the order 
+- Deploy the apis to containers and migrate to global Dynamodb  
+
+
+
+
+
 
 -----------------------------------------------------------------------------------------------------------------------------
 
