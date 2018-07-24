@@ -5,10 +5,9 @@ import java.util.List;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 
-
 @EnableScan
-public interface CardRepository extends CrudRepository<Card, String> {
+public interface UserDAO extends CrudRepository<User, String> {
+	  
+  List<User> findByFirstName(String firstName);
 
-	 public List<Card> findBycardId(String cardId);
-	 
 }
