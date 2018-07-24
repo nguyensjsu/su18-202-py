@@ -48,7 +48,9 @@ Next Week
 - Deploy the apis to containers and migrate to global Dynamodb  
 
 
+Challenges
 
+- We have to look into database connectivity issues that may raise after deploying to containers
 
 
 
