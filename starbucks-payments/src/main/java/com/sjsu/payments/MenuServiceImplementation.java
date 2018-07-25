@@ -15,7 +15,7 @@ public class MenuServiceImplementation implements MenuService {
 	@Override
 	public List<Menu> getCostbyMenuName(String prodName) {
 		// TODO Auto-generated method stub
-		List<Menu> menuObj = (List<Menu>) menuRepository.findById(prodName);
+		List<Menu> menuObj = (List<Menu>) menuRepository.findByProdName(prodName);
 		return menuObj;
 	}
 
