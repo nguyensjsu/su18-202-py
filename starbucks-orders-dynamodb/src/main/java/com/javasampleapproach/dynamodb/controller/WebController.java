@@ -26,16 +26,41 @@ public class WebController {
 
 	@RequestMapping(value = "/saveorder", method = RequestMethod.POST, produces = "application/json")
 	public String saveorder(@RequestBody Order order) {
-		// save a single Order
-		//repository.save(new Order("1", "Cappuchino", "2.50"));
-
-		/* saving an order list */
-		//repository.save(Arrays.asList(new Order("2", "Latte", "3.50"), new Order("3", "Chai", "1.50")));
+		
+		System.out.println("Inside Save order");
+		
+		/* If order is Mocha */
 		if (order.getOrderName().toString().equals("Mocha")) {
 			Mocha m = new Mocha();
 			String[] mo = { order.getSize().toString(), order.getQuantity().toString() };
 			m.setOptions(mo);
 			order.setCost(m.getCost().toString());
+		}
+		
+		/* If order is MasalaChai */
+		if (order.getOrderName().toString().equals("MasalaChai")) {
+			MasalaChai mc = new MasalaChai();
+			String[] mco = { order.getSize().toString(), order.getQuantity().toString() };
+			mc.setOptions(mco);
+			order.setCost(mc.getCost().toString());
+		}
+		
+		/* If order is Cappuchino */
+		if (order.getOrderName().toString().equals("Cappuchino")) {
+			Cappuchino c = new Cappuchino();
+			System.out.println("cappuchino bef adding cost in web=" + order.getCost());
+			String[] co = { order.getSize().toString(), order.getQuantity().toString() };
+			c.setOptions(co);
+			order.setCost(c.getCost().toString());
+			System.out.println("cappuchino after adding cost in web=" + order.getCost());
+		}
+		
+		/* If order is Latte */
+		if (order.getOrderName().toString().equals("Latte")) {
+			Latte l = new Latte();
+			String[] lo = { order.getSize().toString(), order.getQuantity().toString() };
+			l.setOptions(lo);
+			order.setCost(l.getCost().toString());
 		}
 		repository.save(order);
 
