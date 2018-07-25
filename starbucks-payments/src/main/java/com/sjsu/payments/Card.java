@@ -21,9 +21,18 @@ public class Card {
 	  @DynamoDBAttribute(attributeName = "balance")    
 	private String balance;
 	
-	
+	@DynamoDBAttribute(attributeName = "userId")
+	private String userId;
 
 	
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
 	public void setBalance(String balance) {
 		this.balance = balance;
 	}

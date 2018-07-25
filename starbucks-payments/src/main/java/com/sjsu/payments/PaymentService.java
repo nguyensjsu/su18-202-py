@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface PaymentService {
 
-	 public List<Card> getCard(String cardId);
+	 public List<Card> getCardBalance(String cardId);
 	 
-	 
+	 public void updateCardBalance(Card card);
 }

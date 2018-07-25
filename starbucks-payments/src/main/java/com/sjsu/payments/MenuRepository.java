@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 @EnableScan
 public interface MenuRepository  extends CrudRepository<Menu, String>  {
 
-	 public List<Menu> findById(String ProdName);
+	 public List<Menu> findByProdName(String ProdName);
 	 public List<Menu> findAll();
 }

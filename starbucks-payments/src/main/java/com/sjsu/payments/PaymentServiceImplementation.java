@@ -15,11 +15,17 @@ public class PaymentServiceImplementation implements PaymentService {
 	private CardRepository cardRepository;
 	
 	@Override
-	public  List<Card>  getCard(String cardId) {
+	public  List<Card>  getCardBalance(String userId) {
 		// TODO Auto-generated method stub
 		
-	  List<Card> cardobj = (List<Card>) cardRepository.findBycardId(cardId);
+	  List<Card> cardobj = (List<Card>) cardRepository.findByuserId(userId);
 		return cardobj;
+	}
+
+	@Override
+	public void updateCardBalance(Card card) {
+		// TODO Auto-generated method stub
+		cardRepository.save(card);
 	}
 
 }

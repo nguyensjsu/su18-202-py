@@ -10,5 +10,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface CardRepository extends CrudRepository<Card, String> {
 
 	 public List<Card> findBycardId(String cardId);
+	 public List<Card> findByuserId(String userId);
 	 
 }
