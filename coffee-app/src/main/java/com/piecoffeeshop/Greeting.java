@@ -1,4 +1,4 @@
-package com.piecoffee;
+package com.piecoffeeshop;
 
 public class Greeting{
 	private final long id;

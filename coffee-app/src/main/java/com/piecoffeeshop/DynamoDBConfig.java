@@ -1,4 +1,4 @@
-package com.piecoffee;
+package com.piecoffeeshop;
 
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,7 +12,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.util.StringUtils;
  
 @Configuration
-@EnableDynamoDBRepositories(basePackages = "com.piecoffee")
+@EnableDynamoDBRepositories(basePackages = "com.piecoffeeshop")
 public class DynamoDBConfig {
  
 	@Value("${amazon.dynamodb.endpoint}")
