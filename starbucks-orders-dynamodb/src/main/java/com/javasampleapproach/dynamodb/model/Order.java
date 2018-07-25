@@ -9,6 +9,8 @@ public class Order {
 
 	private String id;
 	private String orderName;
+	private String size;
+	private String quantity;
 	private String cost;
 
 	public Order() {
@@ -37,6 +39,24 @@ public class Order {
 	public void setOrderName(String orderName) {
 		this.orderName = orderName;
 	}
+	
+	@DynamoDBAttribute(attributeName = "Size")
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
+	
+	@DynamoDBAttribute(attributeName = "Quantity")
+	public String getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(String quantity) {
+		this.quantity = quantity;
+	}
 
 	@DynamoDBAttribute(attributeName = "Cost")
 	public String getCost() {
@@ -49,7 +69,8 @@ public class Order {
 
 	@Override
 	public String toString() {
-		return String.format("Order[id=%s, orderName='%s', cost='%s']", id, orderName, cost);
+		return String.format("Order[Id=%s, OrderName='%s', Size = '%s', Quantity = '%s', Cost='%s']", 
+				id, orderName, size, quantity, cost);
 	}
 
 }
