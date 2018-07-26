@@ -1,4 +1,4 @@
-#Week 1 Scrum Report 
+# Week 1 Scrum Report 
 
 What did the team do the past week?
 
@@ -8,7 +8,7 @@ What are the current blockers/challenges the team is facing?
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-####Gyanesh Pandey
+#### Gyanesh Pandey
 
 Past Week
 - We focussed on defining the problem. We also had a brainstorm session to figure what might be interesting features we might want to build on top of the basic ones.
@@ -27,7 +27,7 @@ Blockers/Challenges
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-####Yamini Muralidharen
+#### Yamini Muralidharen
 
 
 Past week
@@ -56,7 +56,7 @@ Challenges
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-####Abhinaya Yelipeddi
+#### Abhinaya Yelipeddi
 
 Past Week:
 
@@ -85,7 +85,7 @@ Next Week:
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-###Vidhi
+#### Vidhi
 
 Past Week
 
