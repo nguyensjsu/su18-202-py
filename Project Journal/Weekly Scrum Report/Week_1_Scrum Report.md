@@ -1,4 +1,4 @@
-Week 1 Scrum Report 
+#Week 1 Scrum Report 
 
 What did the team do the past week?
 
@@ -6,7 +6,9 @@ What is the team going to do next week?
 
 What are the current blockers/challenges the team is facing? 
 
-Gyanesh Pandey
+-----------------------------------------------------------------------------------------------------------------------------
+
+####Gyanesh Pandey
 
 Past Week
 - We focussed on defining the problem. We also had a brainstorm session to figure what might be interesting features we might want to build on top of the basic ones.
@@ -25,8 +27,7 @@ Blockers/Challenges
 
 -----------------------------------------------------------------------------------------------------------------------------
 
-
-Yamini Muralidharen
+####Yamini Muralidharen
 
 
 Past week
@@ -53,11 +54,9 @@ Challenges
 - We have to look into database connectivity issues that may raise after deploying to containers
 
 
-
 -----------------------------------------------------------------------------------------------------------------------------
 
-Abhinaya Yelipeddi
--------------------
+####Abhinaya Yelipeddi
 
 Past Week:
 
@@ -86,8 +85,21 @@ Next Week:
 
 ------------------------------------------------------------------------------------------------------------------------------
 
+###Vidhi
+
+Past Week
+
+We focued in the requirements, did brainstorming and dedcided the architecture for the team project.
+Sprint Planning.
+I created tabels in Dynamodb.
+IAM roles(for all the team members) on AWS Console.
+Learnt about Spring Boot
+Installed DynamoDB locally
+Worked to creating GET, POST and DELETE REST API for Users.
 
 
+Next Week
 
-
-Vidhi
+Working on creating API for Authentication
+Will be learning to deploy API on Docker 
+We will be merging all the API's and deploy on EC2 instance and Docker container
