@@ -1,5 +1,0 @@
-com/java/dynamodb/controller/WebController.class
-com/java/dynamodb/config/DynamoDBConfig.class
-com/java/dynamodb/model/Useers.class
-com/java/dynamodb/SpringDynamoDB.class
-com/java/dynamodb/repo/UsersRepository.class
