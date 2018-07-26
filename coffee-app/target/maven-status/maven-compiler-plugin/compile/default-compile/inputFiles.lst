@@ -1,1 +1,6 @@
-/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/App.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/AppController.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/config/DynamoDBConfig.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Card.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Greeting.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/Application.java
+/Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/CardRepository.java

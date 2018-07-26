@@ -1,1 +1,6 @@
-com/piecoffeeshop/App.class
+com/piecoffeeshop/model/Greeting.class
+com/piecoffeeshop/repo/CardRepository.class
+com/piecoffeeshop/config/DynamoDBConfig.class
+com/piecoffeeshop/Application.class
+com/piecoffeeshop/controller/AppController.class
+com/piecoffeeshop/model/Card.class
