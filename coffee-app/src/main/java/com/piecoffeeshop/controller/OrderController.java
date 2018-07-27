@@ -1,11 +1,14 @@
 package com.piecoffeeshop.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.piecoffeeshop.repo.OrderRepository;
 import com.piecoffeeshop.model.Cappuchino;
@@ -26,10 +29,10 @@ public class OrderController {
 		return "All Orders Deleted";
 	}
 
-	@RequestMapping(value = "/saveorder", method = RequestMethod.POST, produces = "application/json")
-	public String saveorder(@RequestBody Order order) {
+	@RequestMapping(value = "/makeorder", method = RequestMethod.POST, produces = "application/json")
+	public String makeorder(@RequestBody Order order,RedirectAttributes redirectAttributes) {
 		
-		System.out.println("Inside Save order");
+		System.out.println("Inside make order");
 		
 		/* If order is Mocha */
 		if (order.getOrderName().toString().equals("Mocha")) {
@@ -63,10 +66,13 @@ public class OrderController {
 			String[] lo = { order.getSize().toString(), order.getQuantity().toString() };
 			l.setOptions(lo);
 			order.setCost(l.getCost().toString());
+			
 		}
-		repository.save(order);
-
-		return "OrderSaved";
+		 //redirectAttributes.addAttribute(order);
+		PaymentController.getCostbyOrder(order);
+		//repository.save(order);
+		 return "Saving to Cart. Make payment to process the order";
+		//return new ResponseEntity<> (order, HttpStatus.OK);
 	}
 
 	@RequestMapping("/showall")
