@@ -1,5 +1,12 @@
 package com.piecoffeeshop.model;
 
+/**
+ * 
+ * @author Abhinaya Yelipeddi
+ * This is class for MasalaChai Coffee
+ *
+ */
+
 
 
 public class MasalaChai implements CostDecorator {

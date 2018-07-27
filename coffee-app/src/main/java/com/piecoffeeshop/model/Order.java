@@ -4,6 +4,14 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
+/**
+ * 
+ * @author Abhinaya Yelipeddi
+ * This is the Order POJO class to Manage Orders.
+ * We have id, OrderName, size, quantity and cost.
+ *
+ */
+
 @DynamoDBTable(tableName = "Order")
 public class Order {
 

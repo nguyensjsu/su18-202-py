@@ -1,9 +1,12 @@
 package com.piecoffeeshop.controller;
 
 import java.util.Arrays;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,17 +25,24 @@ public class UserController {
 		return "Deleted All the Users";
 	}
 
-	@RequestMapping("/saveUsers")
-	public String save() {
-		// save a single User
-		repository.save(new User("JSA-1", "Jack", "","","",""));
-
-//		// save a list of Customers
-//		repository.save(Arrays.asList(new User("JSA-2", "Adam", "","","",""), new User("JSA-3", "Kim", "","","",""),
-//				new User("JSA-4", "David", "","","",""), new User("JSA-5", "Peter","","","","")));
-
-		return "Saved Users";
-	}
+	@RequestMapping(value="/saveUsers", method = RequestMethod.POST)
+	public String save(@RequestBody Map<String, String > users) {
+		System.out.println(users.get("UserId") + ""+
+							users.get("Name")+""+
+							users.get("CardId")+""+
+							users.get("PhoneNo")+""+
+							users.get("PaymentOptions")+""+
+							users.get("AccessPin"));
+		repository.save(new User(
+				users.get("UserId"), 
+				users.get("Name"), 
+				users.get("CardId"),
+				users.get("PhoneNo"),
+				users.get("PaymentOptions"),
+				users.get("AccessPin"))); 
+		return "Save Users";
+	
+			}
 
 	@RequestMapping("/findallUsers")
 	public String findAll() {

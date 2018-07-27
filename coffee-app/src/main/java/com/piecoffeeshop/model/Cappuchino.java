@@ -1,5 +1,12 @@
 package com.piecoffeeshop.model;
 
+/**
+ * 
+ * @author Abhinaya Yelipeddi
+ * This is class for Cappuchino Coffee
+ *
+ */
+
 
 public class Cappuchino implements CostDecorator {
 	private String[] options;

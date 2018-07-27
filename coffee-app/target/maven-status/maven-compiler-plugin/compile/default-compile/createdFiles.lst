@@ -14,11 +14,13 @@ com/piecoffeeshop/model/MenuServiceImplementation.class
 com/piecoffeeshop/model/Order.class
 com/piecoffeeshop/model/Menu.class
 com/piecoffeeshop/repo/OrderRepository.class
+com/piecoffeeshop/model/OrderServiceImplementation.class
 com/piecoffeeshop/repo/UserRepository.class
 com/piecoffeeshop/model/Cappuchino.class
 com/piecoffeeshop/model/User.class
 com/piecoffeeshop/repo/CardRepository.class
 com/piecoffeeshop/model/PaymentServiceImplementation.class
 com/piecoffeeshop/Application.class
+com/piecoffeeshop/model/OrderService.class
 com/piecoffeeshop/model/Mocha.class
 com/piecoffeeshop/repo/MenuRepository.class
