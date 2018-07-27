@@ -1,4 +1,4 @@
-package com.javasampleapproach.dynamodb.model;
+package com.piecoffeeshop.model;
 
 
 public class Cappuchino implements CostDecorator {

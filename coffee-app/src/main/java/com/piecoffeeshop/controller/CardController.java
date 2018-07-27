@@ -16,7 +16,7 @@ import com.piecoffeeshop.model.Greeting;
 import com.piecoffeeshop.repo.CardRepository;
 
 @RestController
-public class AppController{
+public class CardController{
 	
 	@Autowired
 	CardRepository repository;
@@ -24,7 +24,7 @@ public class AppController{
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong(); 
 
-	private Card cc = new Card("1234567887654321","9876","51.00");
+	private Card cc = new Card("1234567887654321","9876","51.00","999");
 
 	@RequestMapping("/greeting")
 	public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name){
@@ -48,22 +48,33 @@ public class AppController{
 		return result;
 	}
 	
-	@RequestMapping("/delete")
+	@RequestMapping("/deletecard")
 	public String delete() {
 		repository.deleteAll();
 		return "Done";
 	}
+	
+	/*
+	 * Sample Request Body
+	 * {
+		"CardId":"1234432167899879",
+		"CardPin":"1234",
+		"CardBalance":"22.00",
+		"userId":"987"
+		}
+	 * */
 	
 	@RequestMapping(value = "/savecard", method = RequestMethod.POST)
 	public String save(@RequestBody Map<String, String> params) {
 		// save a single Card
 		System.out.println(params.get("CardId") + " " +  
 				params.get("CardPin") + " " +
-				params.get("CardBalance"));
+				params.get("CardBalance") + " " + params.get("userId") );
 		repository.save(new Card(
 				params.get("CardId"), 
 				params.get("CardPin"), 
-				params.get("CardBalance"))); 
+				params.get("CardBalance"),
+				params.get("userId"))); 
 		return "Done";
 	}
 	

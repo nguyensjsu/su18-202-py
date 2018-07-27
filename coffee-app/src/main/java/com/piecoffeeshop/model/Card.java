@@ -13,6 +13,7 @@ public class Card {
 	private String cardId;
 	private String cardPIN;
 	private String balance;
+	private String userId;
 	
 	private static Random rndm = new Random();
 	private static int idRndm;
@@ -20,12 +21,13 @@ public class Card {
 	public Card() {
 	}
 	
-	public Card(String Id, String PIN, String bal) {
+	public Card(String Id, String PIN, String bal, String uId) {
 		idRndm = rndm.nextInt(1000) + 1;
 		id = (new Integer(idRndm)).toString();
 		cardId = Id;
 		cardPIN = PIN;
 		balance = bal;
+		userId = uId;
 	}
 	
 	@DynamoDBHashKey(attributeName = "Id")
@@ -49,6 +51,11 @@ public class Card {
 		return balance;
 	}
 	
+	@DynamoDBAttribute(attributeName = "userId")
+	public String getUserId() {
+		return userId;
+	}
+	
 	public void setId(String i) {
 		id = i;
 	}
@@ -64,10 +71,14 @@ public class Card {
 	public void setBalance(String bal) {
 		balance = bal;
 	}
+
+	public void setUserId(String uId) {
+		userId = uId;
+	}
 	
 	@Override
 	public String toString() {
-		return String.format("Card[id=%s, CardId='%s', CardPIN='%s', CardBalance='%s']", id, cardId, cardPIN, balance);
+		return String.format("Card[id=%s, CardId='%s', CardPIN='%s', CardBalance='%s', UserId='%s']", id, cardId, cardPIN, balance, userId);
 	}
 
 }

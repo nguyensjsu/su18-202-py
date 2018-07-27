@@ -1,4 +1,4 @@
-package com.javasampleapproach.dynamodb.model;
+package com.piecoffeeshop.model;
 
 public interface CostDecorator {
 	Double getCost();

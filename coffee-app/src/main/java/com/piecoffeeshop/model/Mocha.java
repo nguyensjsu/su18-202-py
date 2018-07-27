@@ -1,4 +1,4 @@
-package com.javasampleapproach.dynamodb.model;
+package com.piecoffeeshop.model;
 
 public class Mocha implements CostDecorator {
 	private String[] options;
