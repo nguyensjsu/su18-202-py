@@ -15,6 +15,7 @@ public class StarbucksPaymentsApplication {
 
 
 	public static void main(String[] args) {
+		System.out.println("Hello world");
 		SpringApplication.run(StarbucksPaymentsApplication.class, args);
 	}
 	
