@@ -22,8 +22,6 @@ What are the current blockers/challenges the team is facing?
 
 
 ## Gyanesh Pandey
-
-## Gyanesh Pandey
 - Worked on setting up local DynamoDB and then connected to the global DynamoDB instance.
 - Completed the AddCard API from the data model to API endpoint.
 - Added some failure scenarios. Card number should be 16 digit and Pin should be 4.
