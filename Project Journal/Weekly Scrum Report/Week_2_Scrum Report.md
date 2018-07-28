@@ -34,7 +34,21 @@ What are the current blockers/challenges the team is facing?
 
 
 ## Abhi Yelipeddi
+1. Successfully implemented spring boot application and connected to local orders dynamodb.
+2. Implemented makeorder, showall, deletebyid, orderbyid, deleteall REST APIs using local dynamodb
+3. Migrated from local dynamodb to global dynamodb order table.
+4. Worked on adding random id generator for the ordered primary key in ordertable.
+5. Worked on OrderService.java and OrderServiceImplementation.java files. These files implement APIs for find the order name and call the respective coffee classes to get the cost.
+6. Decoupled the code from the controller and model and moved the business logic change from 
+order controller to model package
+7. Integrated code with other team members and verified the order REST APIs on Postman
+8. Implemented some jUnit test cases for delete all REST API and showall REST APIs
+9. Worked on Architecture diagram 
+10. Analyzed and studied the steps to deploy jar in Elastic Bean Stack
 
+## Challenges
+1. Integrating with other team members REST APIs. 
+2. Merging and modularizing the code in a common project.
 
 
 ## Vidhi Sharma
