@@ -38,5 +38,5 @@ What are the current blockers/challenges the team is facing?
  
 
 ### Blockers
-- Created Authentication API using lamba functiona and API Gateway
+- Created Authentication API using lamba functiona and API Gateway but facing issues while invoking Lambda function
 
