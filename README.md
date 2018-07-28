@@ -1,5 +1,7 @@
 # su18-202-py
 
+This project is a set of APIs meant to be designed for a coffee app. The comprehensive deployable code is in the folder coffee-app. The technology stack used is Spring Boot with an AWS Dynamo DB instance. The APIs due to their flexibility can be used from any front end technology - Browser or an App. 
+
 Architecture Diagram:
 ---------------------
 
