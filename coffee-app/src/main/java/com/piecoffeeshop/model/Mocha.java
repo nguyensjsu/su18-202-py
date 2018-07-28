@@ -1,5 +1,13 @@
 package com.piecoffeeshop.model;
 
+/**
+ * 
+ * @author Abhinaya Yelipeddi
+ * This is class for Mocha Coffee
+ *
+ */
+
+
 public class Mocha implements CostDecorator {
 	private String[] options;
 	private Double cost = 0.0;
@@ -9,17 +17,17 @@ public class Mocha implements CostDecorator {
 	public void setOptions(String[] options) {
 		this.options = options;
 		if ("Small".equals(options[0])) {
-			this.cost +=5.00;
+			this.cost +=1.00;
 			
 		}
 		
 		if ("Medium".equals(options[0])) {
-			this.cost +=6.00;
+			this.cost +=1.50;
 			
 		}
 		
 		if ("Large".equals(options[0])) {
-			this.cost +=8.00;
+			this.cost +=2.00;
 			
 		}
 		

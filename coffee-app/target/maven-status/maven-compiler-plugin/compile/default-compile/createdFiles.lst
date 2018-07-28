@@ -3,9 +3,13 @@ com/piecoffeeshop/model/MenuServiceImplementation.class
 com/piecoffeeshop/model/Order.class
 com/piecoffeeshop/model/Menu.class
 com/piecoffeeshop/repo/OrderRepository.class
+<<<<<<< HEAD
 com/piecoffeeshop/model/CostDecorator.class
 com/piecoffeeshop/model/Card.class
 com/piecoffeeshop/controller/PaymentController.class
+=======
+com/piecoffeeshop/model/OrderServiceImplementation.class
+>>>>>>> 60e0c6bcd787db3c046fdd187bf6e1148b21b7bf
 com/piecoffeeshop/repo/UserRepository.class
 com/piecoffeeshop/model/User.class
 com/piecoffeeshop/controller/OrderController.class
@@ -15,8 +19,12 @@ com/piecoffeeshop/repo/CardRepository.class
 com/piecoffeeshop/config/DynamoDBConfig.class
 com/piecoffeeshop/model/PaymentServiceImplementation.class
 com/piecoffeeshop/Application.class
+<<<<<<< HEAD
 com/piecoffeeshop/model/Latte.class
 com/piecoffeeshop/model/PaymentService.class
+=======
+com/piecoffeeshop/model/OrderService.class
+>>>>>>> 60e0c6bcd787db3c046fdd187bf6e1148b21b7bf
 com/piecoffeeshop/model/Mocha.class
 com/piecoffeeshop/controller/UserController.class
 com/piecoffeeshop/repo/MenuRepository.class

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/PaymentServiceImplementation.java
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/MenuRepository.java
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/OrderController.java
@@ -21,3 +22,31 @@
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/MasalaChai.java
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/MenuServiceImplementation.java
 /Users/gpandey/ms/cmpe202/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/CardRepository.java
+=======
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Mocha.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Cappuchino.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/OrderRepository.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/MenuService.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/OrderService.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/PaymentService.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/MenuServiceImplementation.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/config/DynamoDBConfig.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Greeting.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Latte.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/CostDecorator.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/OrderController.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/UserController.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Card.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/PaymentServiceImplementation.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/User.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/CardController.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/MasalaChai.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Menu.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/MenuRepository.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/UserRepository.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/controller/PaymentController.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/OrderServiceImplementation.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/repo/CardRepository.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/Application.java
+/Users/priysharma/Documents/Vidhi/SJSU/Summer/repo/su18-202-py/coffee-app/src/main/java/com/piecoffeeshop/model/Order.java
+>>>>>>> 60e0c6bcd787db3c046fdd187bf6e1148b21b7bf

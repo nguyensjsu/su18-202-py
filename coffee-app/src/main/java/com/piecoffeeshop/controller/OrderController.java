@@ -1,21 +1,35 @@
 package com.piecoffeeshop.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.piecoffeeshop.menumodel.Cappuchino;
-import com.piecoffeeshop.model.Latte;
-import com.piecoffeeshop.model.MasalaChai;
-import com.piecoffeeshop.model.Mocha;
 import com.piecoffeeshop.model.Order;
+import com.piecoffeeshop.model.OrderServiceImplementation;
 import com.piecoffeeshop.repo.OrderRepository;
+
+/**
+ * 
+ * @author Abhinaya Yelipeddi
+ * This is the web controller class to Manage Orders.
+ * We have for REST API implementations
+ * makeorder --- to create an order and interact with payments API
+ * showall ---- to show all the orders for which payments are made successfully
+ * deletebyid ---- to delete an order based on id
+ * orderbyid ---- to show an order based on id
+ *
+ */
 
 @RestController
 public class OrderController {
+	private static Random rndm = new Random();
+	private static int idRndm;
 
 	@Autowired
 	OrderRepository repository;
@@ -26,47 +40,22 @@ public class OrderController {
 		return "All Orders Deleted";
 	}
 
-	@RequestMapping(value = "/saveorder", method = RequestMethod.POST, produces = "application/json")
-	public String saveorder(@RequestBody Order order) {
+	@RequestMapping(value = "/makeorder", method = RequestMethod.POST, produces = "application/json")
+	public String makeorder(@RequestBody Order order,RedirectAttributes redirectAttributes) {
 		
-		System.out.println("Inside Save order");
-		
-		/* If order is Mocha */
-		if (order.getOrderName().toString().equals("Mocha")) {
-			Mocha m = new Mocha();
-			String[] mo = { order.getSize().toString(), order.getQuantity().toString() };
-			m.setOptions(mo);
-			order.setCost(m.getCost().toString());
+		if (!order.getOrderName().isEmpty()) {
+		System.out.println("Inside make order");
+	
+		idRndm = rndm.nextInt(1000) + 1;
+		String idStr = new Integer(idRndm).toString();
+		order.setId(idStr);
+		OrderServiceImplementation orderImpl = new OrderServiceImplementation();		
+		PaymentController.getCostbyOrder(orderImpl.getSpecificOrder(order));	
+		 return "Saving to Cart. Make payment to process the order";
+		} else {
+			return "Order is empty. Please enter the order correctly";
 		}
 		
-		/* If order is MasalaChai */
-		if (order.getOrderName().toString().equals("MasalaChai")) {
-			MasalaChai mc = new MasalaChai();
-			String[] mco = { order.getSize().toString(), order.getQuantity().toString() };
-			mc.setOptions(mco);
-			order.setCost(mc.getCost().toString());
-		}
-		
-		/* If order is Cappuchino */
-		if (order.getOrderName().toString().equals("Cappuchino")) {
-			Cappuchino c = new Cappuchino();
-			System.out.println("cappuchino bef adding cost in web=" + order.getCost());
-			String[] co = { order.getSize().toString(), order.getQuantity().toString() };
-			c.setOptions(co);
-			order.setCost(c.getCost().toString());
-			System.out.println("cappuchino after adding cost in web=" + order.getCost());
-		}
-		
-		/* If order is Latte */
-		if (order.getOrderName().toString().equals("Latte")) {
-			Latte l = new Latte();
-			String[] lo = { order.getSize().toString(), order.getQuantity().toString() };
-			l.setOptions(lo);
-			order.setCost(l.getCost().toString());
-		}
-		repository.save(order);
-
-		return "OrderSaved";
 	}
 
 	@RequestMapping("/showall")
@@ -77,7 +66,6 @@ public class OrderController {
 		for (Order ord : orders) {
 			result += ord.toString() + "<br>";
 		}
-
 		return result;
 	}
 
@@ -89,8 +77,7 @@ public class OrderController {
 	}
 	
 	@RequestMapping("/deletebyid")
-	public String deleteById(@RequestParam("id") String id) {
-		//String result = "";
+	public String deleteById(@RequestParam("id") String id) {		
 		repository.delete(id);
 		return "Deleted the Order";
 	}

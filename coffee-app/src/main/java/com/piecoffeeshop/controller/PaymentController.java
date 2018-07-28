@@ -7,12 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.piecoffeeshop.model.PaymentService;
+import com.piecoffeeshop.repo.OrderRepository;
 import com.piecoffeeshop.model.MenuService;
+import com.piecoffeeshop.model.Order;
 import com.piecoffeeshop.model.Card;
 import com.piecoffeeshop.model.Menu;
 
@@ -31,12 +34,16 @@ public class PaymentController {
 	  @Autowired
 	  private MenuService menuService;
 	  
+		@Autowired
+	   OrderRepository orderrepository;
+	  
 //	  @Autowired
 //	  private UserService userService;
 		
-	  public double menuCost;
+	  private static double menuCost;
 	  public double cardBalance;
 	  public double subtractbalancefromMenu;
+	  static Order currentOrder;
 //	@Autowired
 //	private CardRepository cardRepository;
 	  
@@ -56,9 +63,9 @@ public class PaymentController {
 	    
 	    }
 	  } 
-	  @RequestMapping(method = RequestMethod.POST, value = "/makePayment/{userId}")
-	  public ResponseEntity makePayment(@PathVariable String userId) {
-		    List<Card> card = paymentService.getCardBalance(userId);
+	  @RequestMapping(method = RequestMethod.POST, value = "/makePayment/{cardId}")
+	  public ResponseEntity makePayment(@PathVariable String cardId) {
+		    List<Card> card = paymentService.getCardBalance(cardId);
 		    
 		    if(card.isEmpty())
 		    //	 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
@@ -76,6 +83,7 @@ public class PaymentController {
 				  menuCost = 0 ;
 				  card.get(0).setBalance(Double.toString(subtractbalancefromMenu));
 				  paymentService.updateCardBalance(card.get(0));
+				  orderrepository.save(currentOrder);
 				  //paymentService.
 				  System.out.println("balance" + subtractbalancefromMenu);
 				  return ResponseEntity.status(HttpStatus.ACCEPTED).body("Payment Successful");
@@ -97,8 +105,26 @@ public class PaymentController {
 		
 		  return menu; 
 	  }
+	//  @RequestMapping(method = RequestMethod.GET, value="/getCostbyOrder")
+	  public static  String getCostbyOrder( Order order) {
+		  //List<Menu> menu = menuRepository.findByProdName("ChaiLatte");
+		//  List<Menu> menu =  menuService.getCostbyMenuName(menuName);
+		  
+		 System.out.println( "Hello " + order.getCost());
+		 menuCost  =  Double.parseDouble(order.getCost());
+		 currentOrder= order;
+		/*  if(menu.isEmpty()) {
+			  return "Item not available";
+		  }*/
+			 
+		 
+		 // menuCost= Double.parseDouble(cost);
+		  return order.getCost(); 
+		  }
 	  
-	  @RequestMapping(method = RequestMethod.GET, value="/getCostbyMenu/{menuName}")
+	  
+	  
+	/*  @RequestMapping(method = RequestMethod.GET, value="/getCostbyMenu/{menuName}")
 	  public  String getCostbyMenuName(@PathVariable String menuName) {
 		  //List<Menu> menu = menuRepository.findByProdName("ChaiLatte");
 		  List<Menu> menu =  menuService.getCostbyMenuName(menuName);
@@ -111,7 +137,7 @@ public class PaymentController {
 		  menuCost= Double.parseDouble(cost);
 		  return cost; 
 		  }
-	  }
+	  } */
 	  
 	  
 		 /* while(menu.)

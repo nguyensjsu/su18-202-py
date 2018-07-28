@@ -3,13 +3,12 @@ package com.piecoffeeshop.model;
 /**
  * 
  * @author Abhinaya Yelipeddi
- * This is class for MasalaChai Coffee
+ * This is class for Cappuchino Coffee
  *
  */
 
 
-
-public class MasalaChai implements CostDecorator {
+public class Cappuchino implements CostDecorator {
 	private String[] options;
 	private Double cost = 0.0;
 
@@ -23,7 +22,9 @@ public class MasalaChai implements CostDecorator {
 		}
 		
 		if ("Medium".equals(options[0])) {
+			System.out.println(" medium bef assigning cost=" + cost.toString());
 			this.cost +=1.50;
+			System.out.println("get cost medium=" + cost.toString());
 			
 		}
 		
@@ -33,6 +34,7 @@ public class MasalaChai implements CostDecorator {
 		}
 		
 		if ((options[1]) != null) {
+			System.out.println("Inside options not null option[1]=" + options[1]);
 			this.cost *= Double.parseDouble(options[1]);
 			
 		}
@@ -40,6 +42,7 @@ public class MasalaChai implements CostDecorator {
 	}
 
 	public Double getCost() {
+		System.out.println("get cost in cappuchino=" + cost.toString());
 		return cost;
 		
 	}
