@@ -3,6 +3,9 @@ package com.piecoffeeshop.model;
 
 import java.util.Random;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -63,7 +66,7 @@ public class Card {
 	}
 	
 	public void setCardId(String id) {
-		cardId = id;
+		cardId = id;			
 	}
 	
 	public void setCardPin(String pin) {

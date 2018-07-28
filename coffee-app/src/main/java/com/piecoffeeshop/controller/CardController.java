@@ -1,10 +1,11 @@
 package com.piecoffeeshop.controller;
 
-import java.util.Arrays;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -65,17 +66,44 @@ public class CardController{
 	 * */
 	
 	@RequestMapping(value = "/savecard", method = RequestMethod.POST)
-	public String save(@RequestBody Map<String, String> params) {
+	public ResponseEntity save(@RequestBody Map<String, String> params) {
 		// save a single Card
 		System.out.println(params.get("CardId") + " " +  
 				params.get("CardPin") + " " +
 				params.get("CardBalance") + " " + params.get("userId") );
+
+		String cardId = params.get("CardId");
+		String cardPin = params.get("CardPin");
+		
+		if (!isValidCardId(cardId)) {
+			  return  ResponseEntity.status(HttpStatus.FORBIDDEN).body("Incorrect Card/Pin format.");						
+		}
+
+		if (!isValidCardPin(cardPin)) {
+			  return  ResponseEntity.status(HttpStatus.FORBIDDEN).body("Incorrect Card/Pin format.");						
+		}
+		
 		repository.save(new Card(
 				params.get("CardId"), 
 				params.get("CardPin"), 
 				params.get("CardBalance"),
 				params.get("userId"))); 
-		return "Done";
+		
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body("Card added successfully.");
+	}
+	
+	public boolean isValidCardId(String cardId) {
+		if (cardId.length() == 16) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean isValidCardPin(String cardPin) {
+		if (cardPin.length() == 4) {
+			return true;
+		}
+		return false;
 	}
 	
 }

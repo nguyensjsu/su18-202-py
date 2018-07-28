@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.piecoffeeshop.repo.OrderRepository;
-import com.piecoffeeshop.model.Cappuchino;
+import com.piecoffeeshop.menumodel.Cappuchino;
 import com.piecoffeeshop.model.Latte;
 import com.piecoffeeshop.model.MasalaChai;
 import com.piecoffeeshop.model.Mocha;
 import com.piecoffeeshop.model.Order;
+import com.piecoffeeshop.repo.OrderRepository;
 
 @RestController
 public class OrderController {
