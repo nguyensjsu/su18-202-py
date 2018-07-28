@@ -36,7 +36,7 @@ public class CardController{
 		return cc;
 	}
 	
-	@RequestMapping("/findall")
+	@RequestMapping("/findallcards")
 	public String findAll() {
 		String result = "";
 		Iterable<Card> cards = repository.findAll();
@@ -48,7 +48,7 @@ public class CardController{
 		return result;
 	}
 	
-	@RequestMapping("/deletecard")
+	@RequestMapping("/deleteallcards")
 	public String delete() {
 		repository.deleteAll();
 		return "Done";

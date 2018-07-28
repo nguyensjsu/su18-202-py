@@ -9,7 +9,9 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
  
 @DynamoDBTable(tableName = "Card")
 public class Card {
+	
 	private String id;
+
 	private String cardId;
 	private String cardPIN;
 	private String balance;
