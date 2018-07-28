@@ -4,88 +4,85 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@DynamoDBTable(tableName = "User")
+@DynamoDBTable(tableName = "Users")
 public class User {
 
-	private String id;
+	private String UserId;
+	private String AccessPin;
+	private String CardId;
+	private String PaymentOptions;
+	private String PhoneNo;
 	private String name;
-	private String cardID;
-	private String phoneNo;
-	private String paymentOptions;
-	private String accessPin;
-	private String timeStamp;
-	private String updateTimeStamp;
-
+	
 	public User() {
 	}
 
-	public User(String id, String name, String cardID, String phoneNo, String paymentOptions, String accessPin) {
-		this.id = id;
+	public User(String id, String accessPin, String cardId, String paymentOptions, String phoneNo,String name ) {
+		this.UserId = id;
+		this.AccessPin = accessPin;
+		this.CardId=cardId;
+		this.PaymentOptions=paymentOptions;
+		this.PhoneNo=phoneNo;
 		this.name = name;
-		this.cardID = cardID;
-		this.phoneNo= phoneNo;
-		this.paymentOptions= paymentOptions;
-		this.accessPin= accessPin;
 	}
 
-	@DynamoDBHashKey(attributeName = "Id")
-	public String getId() {
-		return id;
+	@DynamoDBHashKey(attributeName = "UserId")
+	public String getUserId() {
+		return UserId;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setUserId(String id) {
+		this.UserId = id;
 	}
 
-	@DynamoDBAttribute(attributeName = "Name")
+	@DynamoDBAttribute(attributeName = "AccessPin")
+	public String getAccessPin() {
+		return AccessPin;
+	}
+
+	public void setAccessPin(String accessPin) {
+		this.AccessPin = accessPin;
+	}
+	
+	@DynamoDBAttribute(attributeName = "CardId")
+	public String getCardId() {
+		return CardId;
+	}
+
+	public void setCardId(String cardId) {
+		this.CardId = cardId;
+	}
+	
+	@DynamoDBAttribute(attributeName = "PaymentOptions")
+	public String getPaymentOptions() {
+		return PaymentOptions;
+	}
+
+	public void setPaymentOptions(String payment) {
+		this.PaymentOptions = payment;
+	}
+	
+	@DynamoDBAttribute(attributeName = "PhoneNo")
+	public String getPhoneNo() {
+		return PhoneNo;
+	}
+
+	public void setPhoneNo(String phoneNo) {
+		this.PhoneNo = phoneNo;
+	}
+	
+	@DynamoDBAttribute(attributeName = "UserName")
 	public String getName() {
 		return name;
 	}
 
-	public void setFirstName(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	@DynamoDBAttribute(attributeName = "Card ID")
-	public String getCardID() {
-		return cardID;
-	}
-
-	public void setCardID(String cardID) {
-		this.cardID = cardID;
-	}
-
-	@DynamoDBAttribute(attributeName = "Phone NO")
-	public String getPhoneNo() {
-		return phoneNo;
-	}
-
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
-	}
-
-	@DynamoDBAttribute(attributeName = "Payment Options")
-	public String getPaymentOptions() {
-		return paymentOptions;
-	}
-
-	public void setPaymentOptions(String paymentOptions) {
-		this.paymentOptions = paymentOptions;
-	}
-
-	@DynamoDBAttribute(attributeName = "Access Pin")
-	public String getAccessPin() {
-		return accessPin;
-	}
-
-	public void setAccessPin(String accessPin) {
-		this.accessPin = accessPin;
-	}
-	
-
 	@Override
 	public String toString() {
-		return String.format("User[id=%s, Name='%s', CardID='%s', Phone No='%s', Payment Options='%s', Access Pin='%s']", id, name, cardID, phoneNo, paymentOptions, accessPin );
+		return String.format("User[id=%s, AccessPin='%s', CardId='%s', PaymentOptions='%s', PhoneNo='%s', name='%s']", UserId, name, AccessPin, CardId,PaymentOptions, PhoneNo);
 	}
 
 }
