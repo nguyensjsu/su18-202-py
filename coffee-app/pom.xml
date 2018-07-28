@@ -28,6 +28,7 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
+        
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-dynamodb</artifactId>
@@ -39,6 +40,15 @@
       <artifactId>spring-data-dynamodb</artifactId>
       <version>4.5.0</version>
     </dependency>
+    
+    <dependency>
+			<groupId>com.coffee-app-model</groupId>
+            <artifactId>coffee-shop</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/coffee-app-menumodel.jar</systemPath>
+ </dependency>
+ 
     </dependencies>
 
     <properties>
