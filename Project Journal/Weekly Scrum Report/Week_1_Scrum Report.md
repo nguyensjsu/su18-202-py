@@ -89,27 +89,27 @@ Next Week:
 
 Past Week
 
--We focued in the requirements, did brainstorming and dedcided the architecture for the team project.
+- We focued in the requirements, did brainstorming and dedcided the architecture for the team project.
 
--Sprint Planning.
+- Sprint Planning.
 
--I created tabels in Dynamodb.
+- I created tabels in Dynamodb.
 
--IAM roles(for all the team members) on AWS Console.
+- IAM roles(for all the team members) on AWS Console.
 
--Learnt about Spring Boot
+- Learnt about Spring Boot
 
--Installed DynamoDB locally
+- Installed DynamoDB locally
 
--Worked to creating GET, POST and DELETE REST API for Users.
+- Worked to creating GET, POST and DELETE REST API for Users.
 
--Learnt how to properly edit .md files, burnt chart.
+- Learnt how to properly edit .md files, burnt chart.
 
 
 Next Week
 
--Working on creating API for Authentication
+- Working on editing User Profile API
 
--Will be learning to deploy API on Docker 
+- Will be learning to deploy API on Docker 
 
--We will be merging all the API's and deploy on EC2 instance and Docker container
+- We will be merging all the API's and deploy on EC2 instance and Docker container
