@@ -1,4 +1,4 @@
-## Scrum Report 2
+# Scrum Report 2
 
 What did the team do the past week?
 
@@ -20,4 +20,23 @@ What are the current blockers/challenges the team is facing?
 ### Blockers
 - We faced challenges while migrating to global db and deploying  it to clusters.
 
+
+## Gyanesh Pandey
+
+
+
+
+
+## Abhi Yelipeddi
+
+
+
+## Vidhi Sharma
+- Worked on differnet operations for User API like saving the user detials, deleting the details, quering the user details
+- Wrote AWS Policy for the access control of IAM Users and Roles
+- We worked on mergeing all the API's created by team memembers and Resolved all merge conflicts
+ 
+
+### Blockers
+- Created Authentication API using lamba functiona and API Gateway
 
