@@ -22,4 +22,7 @@ Overall Feature Set:
 12. Deployed API to AWS as Docker Containers in Amazon Containers
 13. Deployed the order API in AWS using Serverless framework using dynamodb and Amazon Lambda
 
+Application Block Diagram:
+--------------------
+![alt text](https://github.com/nguyensjsu/su18-202-py/blob/master/CoffeeApp%20Block%20Diagram.png)
 
