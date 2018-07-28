@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: Users
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: priysharma
+Built-By: gpandey
 Implementation-Vendor-Id: com.javasampleapproach
-Build-Jdk: 1.8.0_102
+Build-Jdk: 1.8.0_161
 Implementation-URL: http://projects.spring.io/spring-boot/spring-data-
  dynamodb/
 Created-By: Maven Integration for Eclipse

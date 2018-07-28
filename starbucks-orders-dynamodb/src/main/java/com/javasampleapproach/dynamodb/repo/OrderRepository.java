@@ -5,7 +5,7 @@ import java.util.List;
 import org.socialsignin.spring.data.dynamodb.repository.EnableScan;
 import org.springframework.data.repository.CrudRepository;
 
-import com.javasampleapproach.dynamodb.model.Order;
+import com.piecoffeeshop.model.Order;
 
 @EnableScan
 public interface OrderRepository extends CrudRepository<Order, String> {

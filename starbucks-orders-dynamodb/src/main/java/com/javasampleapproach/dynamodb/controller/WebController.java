@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.javasampleapproach.dynamodb.model.*;
 import com.javasampleapproach.dynamodb.repo.OrderRepository;
+import com.piecoffeeshop.model.Cappuchino;
+import com.piecoffeeshop.model.Latte;
+import com.piecoffeeshop.model.MasalaChai;
+import com.piecoffeeshop.model.Mocha;
+import com.piecoffeeshop.model.Order;
 
 @RestController
 public class WebController {
