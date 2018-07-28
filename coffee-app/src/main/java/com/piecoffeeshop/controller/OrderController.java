@@ -1,5 +1,7 @@
 package com.piecoffeeshop.controller;
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,8 @@ import com.piecoffeeshop.model.OrderServiceImplementation;
 
 @RestController
 public class OrderController {
+	private static Random rndm = new Random();
+	private static int idRndm;
 
 	@Autowired
 	OrderRepository repository;
@@ -40,6 +44,10 @@ public class OrderController {
 		
 		if (!order.getOrderName().isEmpty()) {
 		System.out.println("Inside make order");
+	
+		idRndm = rndm.nextInt(1000) + 1;
+		String idStr = new Integer(idRndm).toString();
+		order.setId(idStr);
 		OrderServiceImplementation orderImpl = new OrderServiceImplementation();		
 		PaymentController.getCostbyOrder(orderImpl.getSpecificOrder(order));	
 		 return "Saving to Cart. Make payment to process the order";
