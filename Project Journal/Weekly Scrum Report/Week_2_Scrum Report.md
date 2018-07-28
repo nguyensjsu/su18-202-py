@@ -16,6 +16,7 @@ What are the current blockers/challenges the team is facing?
 -  Check whether the balance is sufficient to make transaction 
 - Check whether order is valid to make a transaction
 - Worked on deploying the microservice to a load balanced EC2 Cluster 
+- We focussed on the XP core value as Feedback as it helped us to merge the code into a single code base and make changes to the code to accomplish the flow .
 
 ### Blockers
 - We faced challenges while migrating to global db and deploying  it to clusters.
