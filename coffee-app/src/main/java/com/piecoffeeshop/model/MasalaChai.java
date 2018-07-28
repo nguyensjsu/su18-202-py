@@ -18,17 +18,17 @@ public class MasalaChai implements CostDecorator {
 	public void setOptions(String[] options) {
 		this.options = options;
 		if ("Small".equals(options[0])) {
-			this.cost +=3.00;
+			this.cost +=1.00;
 			
 		}
 		
 		if ("Medium".equals(options[0])) {
-			this.cost +=4.00;
+			this.cost +=1.50;
 			
 		}
 		
 		if ("Large".equals(options[0])) {
-			this.cost +=5.00;
+			this.cost +=2.00;
 			
 		}
 		

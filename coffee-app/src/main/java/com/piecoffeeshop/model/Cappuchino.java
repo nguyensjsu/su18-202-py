@@ -17,19 +17,19 @@ public class Cappuchino implements CostDecorator {
 	public void setOptions(String[] options) {
 		this.options = options;
 		if ("Small".equals(options[0])) {
-			this.cost +=4.00;
+			this.cost +=1.00;
 			
 		}
 		
 		if ("Medium".equals(options[0])) {
 			System.out.println(" medium bef assigning cost=" + cost.toString());
-			this.cost +=5.00;
+			this.cost +=1.50;
 			System.out.println("get cost medium=" + cost.toString());
 			
 		}
 		
 		if ("Large".equals(options[0])) {
-			this.cost +=6.00;
+			this.cost +=2.00;
 			
 		}
 		

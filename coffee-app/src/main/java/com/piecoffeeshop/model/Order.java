@@ -1,5 +1,7 @@
 package com.piecoffeeshop.model;
 
+import java.util.Random;
+
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -21,11 +23,15 @@ public class Order {
 	private String quantity;
 	private String cost;
 
+	private static Random rndm = new Random();
+	private static int idRndm;
+	
 	public Order() {
 	}
 
-	public Order(String id, String orderName, String cost) {
-		this.id = id;
+	public Order(String orderName, String cost) {
+		idRndm = rndm.nextInt(1000) + 1;
+		this.id =  (new Integer(idRndm)).toString();
 		this.orderName = orderName;
 		this.cost = cost;
 	}
