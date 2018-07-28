@@ -28,6 +28,6 @@ Application Block Diagram:
 --------------------
 ![alt text](https://github.com/nguyensjsu/su18-202-py/blob/master/CoffeeApp%20Block%20Diagram.png)
 
-Early Wireframe:
+Early Wireframes:
 --------------------
 ![alt text](https://github.com/nguyensjsu/su18-202-py/blob/master/resources/PieCofeeShop.png)
