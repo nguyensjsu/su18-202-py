@@ -18,8 +18,15 @@ public class Menu {
 	private String ProdName;
 	
 	
-	private String Cost;
+	private String sizesAvailable;
 	
+	 @DynamoDBAttribute(attributeName = "sizesAvailable")
+	public String getSizesAvailable() {
+		return sizesAvailable;
+	}
+	public void setSizesAvailable(String sizesAvailable) {
+		this.sizesAvailable = sizesAvailable;
+	}
 	public void setId(String id) {
 		Id = id; 
 	}
@@ -37,13 +44,7 @@ public class Menu {
 		ProdName = prodName;
 	}
 
-	public void setCost(String cost) {
-		Cost = cost;
-	}
-	@DynamoDBAttribute(attributeName = "Cost")
-    public String getCost() {
-		return Cost;
-	}
+	
     @DynamoDBAttribute(attributeName = "ProdName")
     public String getProdName() {
 		return ProdName;
